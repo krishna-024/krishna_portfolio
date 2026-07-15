@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Dubey | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts & FontAwesome for Social Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Global Interactive 3D Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Cursor Dots -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Nav Rail (Sidebar Navigation) -->
+    <div class="nav-rail">
+        <div class="rail-dot active" data-target="#hero"></div>
+        <div class="rail-dot" data-target="#about"></div>
+        <div class="rail-dot" data-target="#experience"></div>
+        <div class="rail-dot" data-target="#projects"></div>
+        <div class="rail-dot" data-target="#achievements"></div>
+        <div class="rail-dot" data-target="#education"></div>
+        <div class="rail-dot" data-target="#contact"></div>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Welcome to my space</span>
+            <h1>Hi, I'm <span class="highlight">Krishna Dubey</span></h1>
+            <div class="hero-roles">
+                <div id="roleTrack">
+                    <span>AI / ML Developer</span>
+                    <span>Full-Stack Engineer</span>
+                    <span>Generative AI Specialist</span>
+                    <span>SIH 2025 Grand Finalist</span>
+                </div>
+            </div>
+            <p class="hero-desc">
+                Computer Science undergraduate specializing in AI, Machine Learning, Generative AI, and Full-Stack Development. Proven track record in building scalable AI pipelines, NLP systems, and cloud-native applications.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn primary">View Work</a>
+                <button class="btn secondary" id="viewResumeBtn"><i class="fa-solid fa-file-pdf"></i> Resume Options</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE RESUME MODAL -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Interactive Resume</h3>
+            <div class="modal-actions">
+                <!-- Fallback Direct PDF Download -->
+                <a href="resume.pdf" download="Krishna_Dubey_Resume.pdf" class="btn primary"><i class="fa-solid fa-download"></i> Download PDF</a>
+            </div>
+            <div class="iframe-container">
+                <iframe src="resume.pdf" width="100%" height="100%" type="application/pdf"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" class="reveal">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I build energy-efficient AI models and high-performance web applications. With research experience from IIT (BHU), Varanasi focusing on routing protocols and contextual AI models, I focus on low-latency, scalable solutions.
+            </p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="num" data-count="89" data-suffix="%">0%</h3>
+                    <p>Personality & Emotion Classifier Accuracy</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="num" data-count="45" data-suffix="%">0%</h3>
+                    <p>Page Load Time Reduction</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="num" data-count="10" data-suffix="x">0x</h3>
+                    <p>AI Copywriting Speed Increase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. EXPERIENCE SECTION -->
+    <section id="experience" class="reveal">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <!-- IIT BHU -->
+                <div class="timeline-item">
+                    <span class="date">May 2026 - Jul 2026</span>
+                    <h3>Summer Research Intern</h3>
+                    <h4>Indian Institute of Technology (BHU), Varanasi</h4>
+                    <p>
+                        • Conducted research on WSN architectures, evaluating energy-efficient routing protocols like LEACH, PEGASIS, AODV, and DSR.<br>
+                        • Developed and benchmarked deep learning models for sequence processing and optimized feature extraction pipelines.<br>
+                        • Collaborated on building scalable AI microservices utilizing Python, FastAPI, React.js, and secure JWT authentication.
+                    </p>
+                </div>
+                <!-- IBM -->
+                <div class="timeline-item">
+                    <span class="date">Jul 2025 - Aug 2025</span>
+                    <h3>Generative AI Intern</h3>
+                    <h4>IBM Developer Skills Network</h4>
+                    <p>
+                        • Programmed 3+ Generative AI applications leveraging OpenAI/Hugging Face APIs and orchestrated low-latency pipelines.<br>
+                        • Implemented few-shot prompting strategies, improving contextual accuracy and response relevance by 25%.<br>
+                        • Designed interactive application frontends using Gradio, deploying containerized workflows for cross-team evaluation.
+                    </p>
+                </div>
+                <!-- Social Chammach -->
+                <div class="timeline-item">
+                    <span class="date">Jul 2025 - Sep 2025</span>
+                    <h3>Business Development Associate Intern</h3>
+                    <h4>Social Chammach</h4>
+                    <p>
+                        • Managed outbound marketing operations, optimizing client acquisition pipelines and presenting technology integration solutions.<br>
+                        • Coordinated cross-functional teams to streamline digital campaign deliveries, improving active lead engagement metrics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section id="projects" class="reveal">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- PersonaAI -->
+                <div class="project-card tilt">
+                    <span class="date">2026</span>
+                    <h3>PersonaAI</h3>
+                    <p>Personality Prediction & Speech Emotion Recognition (SER) achieving 89% accuracy.</p>
+                    <ul>
+                        <li>Uses PyTorch, Scikit-learn, and Librosa for audio extraction.</li>
+                        <li>Processes 10k+ character text inputs in under 1.2s using TF-IDF, embeddings, and BERT.</li>
+                        <li>Scalable REST APIs via FastAPI with JWT, reducing query latency by 25%.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>PyTorch</span><span>FastAPI</span><span>BERT</span><span>Librosa</span><span>JWT</span>
+                    </div>
+                </div>
+                <!-- Audio LM -->
+                <div class="project-card tilt">
+                    <span class="date">2025</span>
+                    <h3>Audio Language Model</h3>
+                    <p>Real-time speech-to-text and intent-recognition system with an 8.5% Word Error Rate (WER).</p>
+                    <ul>
+                        <li>Model quantization reduced CPU inference latency by 40%.</li>
+                        <li>National Grand Finalist project at Smart India Hackathon (SIH) 2025.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>PyTorch</span><span>Quantization</span><span>Speech-To-Text</span><span>Audio Processing</span>
+                    </div>
+                </div>
+                <!-- Sociogram -->
+                <div class="project-card tilt">
+                    <span class="date">2025</span>
+                    <h3>Sociogram</h3>
+                    <p>Multi-tier social application secured with OAuth 2.0 and JWT.</p>
+                    <ul>
+                        <li>Lowered page load times by 45% using Redis-backed caching and connection pooling.</li>
+                        <li>Containerized microservices using Docker with automated GitHub Actions CI/CD.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>React.js</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+                    </div>
+                </div>
+                <!-- Caption Generator -->
+                <div class="project-card tilt">
+                    <span class="date">2025</span>
+                    <h3>AI Social Media Caption Generator</h3>
+                    <p>AI-powered caption generator improving copywriting speeds by 10x.</p>
+                    <ul>
+                        <li>OpenAI GPT APIs with Gradio frontend and few-shot learning.</li>
+                        <li>Integrated NLTK-driven sentiment analysis filters for content validation.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>GPT API</span><span>Gradio</span><span>Prompt Engineering</span><span>NLTK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ACHIEVEMENTS & LEADERSHIP -->
+    <section id="achievements" class="reveal">
+        <div class="container">
+            <h2>Achievements & Leadership</h2>
+            <div class="ach-grid">
+                <!-- SIH -->
+                <div class="ach-card tilt">
+                    <div class="ach-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <h4>Smart India Hackathon 2025</h4>
+                    <p>Grand Finalist: Designed real-time edge speech models, presenting to a national jury. Selected out of 50,000+ teams.</p>
+                </div>
+                <!-- TechSprint -->
+                <div class="ach-card tilt">
+                    <div class="ach-icon"><i class="fa-solid fa-award"></i></div>
+                    <h4>TechSprint (GDG) - 2nd Position</h4>
+                    <p>Led rapid-deployment full-stack project development cycle in a competitive sprint[cite: 4].</p>
+                </div>
+                <!-- GeeksforGeeks -->
+                <div class="ach-card tilt">
+                    <div class="ach-icon"><i class="fa-solid fa-users-gear"></i></div>
+                    <h4>Event & Op Head: GeeksforGeeks Chapter</h4>
+                    <p>Directed outreach strategies at Buddha Institute of Technology (BIT), leading 5+ hackathons for 500+ students.</p>
+                </div>
+                <!-- E-Cell -->
+                <div class="ach-card tilt">
+                    <div class="ach-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h4>Social Media Head: E-Cell, BIT</h4>
+                    <p>Managed digital campaign pipelines, boosting campus event registration by 40%.</p>
+                </div>
+                <!-- Other certs -->
+                <div class="ach-card tilt">
+                    <div class="ach-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h4>Certifications & Shortlists</h4>
+                    <p>IBM Generative AI Professional Certificate, Finalist at Hacknovate 7.0, and Selected for AICTE IDE Bootcamp Jodhpur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. EDUCATION SECTION -->
+    <section id="education" class="reveal">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="edu-card">
+                <h3>Buddha Institute of Technology, Gorakhpur (AKTU)</h3>
+                <p class="edu-degree">Bachelor of Technology in Computer Science and Engineering (AI & ML Specialization)</p>
+                <div class="edu-meta">
+                    <span><strong>Expected Graduation:</strong> 2027</span>
+                    <span><strong>CGPA:</strong> 7.5 / 10</span>
+                </div>
+                <div class="coursework">
+                    <strong>Relevant Coursework:</strong> Data Structures, Object-Oriented Programming, DBMS, Operating Systems, Software Engineering.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" class="reveal">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-sub">Let's collaborate on AI pipelines or web development projects.</p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:krishnadubey024@gmail.com">krishnadubey024@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+918181957924">+91 8181957924</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Gorakhpur, Uttar Pradesh, India</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/krishna-dubey-b4450b348" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/krishna-024" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <!-- Direct Action Floating Resume Trigger -->
+                    <button id="contactResumeTrigger" class="btn primary"><i class="fa-solid fa-file-invoice"></i> Resume Options</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Krishna Dubey. Built with Three.js, GSAP & Passion.</p>
+    </footer>
+
+    <!-- EXTERNAL LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- YOUR SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
